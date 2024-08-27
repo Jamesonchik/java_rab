@@ -8,8 +8,22 @@ public class Main {
 
         int current, min;
 
+        System.out.println("Введите число:");
+
         current = scanner.nextInt();
 
-        System.out.println(current);
+        min = current;
+
+        while (current != -1) {
+            if (current < min) {
+                System.out.println("Нашли число меншье!");
+                min = current;
+            }
+            System.out.println("Введите число:");
+            current = scanner.nextInt();
+        }
+
+        System.out.println("Минимум - " + min);
+
     }
 }
